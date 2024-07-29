@@ -7,7 +7,7 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             Product id_1 = new Product();
             String user_product = "";
-            int money;
+            int money = 0;
             String user_term;
             String payment;
             System.out.print("Введите продукт который хотите купить: ");
@@ -16,8 +16,16 @@ public class Main {
             System.out.print("Прочитайте срок годности и введите его сюда: ");
             user_term = scanner.nextLine();
             Product.find_term(user_term);
-            System.out.print("Сколько у вас денег: ");
-            money = scanner.nextInt();
+            while(true) {
+                    try {
+                            System.out.print("Сколько у вас денег: ");
+                            money = scanner.nextInt();
+                            break;
+                    } catch (Exception e) {
+                            System.out.println("Это не деньги!");
+                            scanner.nextLine();
+                    }
+            }
             Product.check_money(money);
             System.out.println("С вас " + Product.send_cost() + " рублей");
             System.out.println("Сами понимаете инфляция");
