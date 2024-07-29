@@ -1,9 +1,9 @@
 package samalex.programm;
 
-    import java.util.Scanner;
+import java.util.Scanner;
 
-    public class Main {
-        public static void main(String[] args) {
+public class Main {
+    public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
             Product id_1 = new Product();
             String user_product = "";
@@ -30,6 +30,6 @@ package samalex.programm;
             }
             else {
                 System.out.println("Походу у вас нет денег. УШЁЛ ПОКА МЕНТОВ НЕ ВЫЗВАЛ!!!");
-            }
         }
     }
+}
