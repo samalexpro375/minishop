@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+            //Проверка
             Scanner scanner = new Scanner(System.in);
             Product id_1 = new Product();
             String user_product = "";
